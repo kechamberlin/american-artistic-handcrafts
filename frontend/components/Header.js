@@ -39,7 +39,9 @@ export default function Header() {
   return (
     <HeaderStyles>
       <div className="bar">
-        <Link href="/">American Artistic Handcrafts</Link>
+        <Logo>
+          <Link href="/">American Artistic Handcrafts</Link>
+        </Logo>
       </div>
       <div className="sub-bar">
         <p>| Search Bar Placeholder |</p>
