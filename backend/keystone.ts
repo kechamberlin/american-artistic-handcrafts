@@ -1,6 +1,11 @@
+import { createAuth } from '@keystone-next/auth';
 import { User } from './schemas/User';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import 'dotenv/config';
+import {
+  withItemData,
+  statelessSessions,
+} from '@keystone-next/keystone/session';
 
 const databaseURL = process.env.DATABASE_URL;
 
