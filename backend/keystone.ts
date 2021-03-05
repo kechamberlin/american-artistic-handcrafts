@@ -1,3 +1,4 @@
+import { User } from './schemas/User';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import 'dotenv/config';
 
