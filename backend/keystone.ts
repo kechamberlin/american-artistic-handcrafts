@@ -14,25 +14,42 @@ const sessionConfig = {
   secret: process.env.COOKIE_SECRET,
 };
 
-export default config({
-  server: {
-    cors: {
-      origin: [process.env.FRONTEND_URL],
-      credentials: true,
-    },
+const { withAuth } = createAuth({
+  listKey: 'User',
+  identityField: 'email',
+  secretField: 'password',
+  initFirstItem: {
+    fields: ['name', 'email', 'password'],
+    // TODO: Add in initial roles here
   },
-  db: {
-    adapter: 'mongoose',
-    url: databaseURL,
-    // TODO: Add data seeding here
-  },
-  lists: createSchema({
-    // Schema items go in here
-    User,
-  }),
-  ui: {
-    // Change this for roles
-    isAccessAllowed: () => true,
-  },
-  // Add session values here
 });
+
+export default withAuth(
+  config({
+    server: {
+      cors: {
+        origin: [process.env.FRONTEND_URL],
+        credentials: true,
+      },
+    },
+    db: {
+      adapter: 'mongoose',
+      url: databaseURL,
+      // TODO: Add data seeding here
+    },
+    lists: createSchema({
+      // Schema items go in here
+      User,
+    }),
+    ui: {
+      // Show the UI only for people who pass this test
+      isAccessAllowed: ({ session }) => {
+        console.log(session);
+        return !!session?.data;
+      },
+    },
+    session: withItemData(statelessSessions(sessionConfig), {
+      User: `id`,
+    }),
+  })
+);
