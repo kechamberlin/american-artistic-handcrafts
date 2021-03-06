@@ -11,6 +11,15 @@ export const Product = list({
         displayMode: 'textarea',
       },
     }),
+    photo: relationship({
+      ref: 'ProductImage.product', // Establishes relationship between Product data type and ProductImage data type
+      ui: {
+        displayMode: 'cards',
+        cardFields: ['image', 'altText'],
+        inlineCreate: { fields: ['image', 'altText'] },
+        inlineEdit: { fields: ['image', 'altText'] },
+      },
+    }),
     status: select({
       options: [
         { label: 'Draft', value: 'DRAFT' },
