@@ -34,11 +34,11 @@ export default function Products() {
   if (error) return <p>Error: {error.message}</p>;
   return (
     <div>
-      <div>
+      <ProductsListStyles>
         {data.allProducts.map((product) => (
           <p key={product.id}>{product.name}</p>
         ))}
-      </div>
+      </ProductsListStyles>
     </div>
   );
 }
