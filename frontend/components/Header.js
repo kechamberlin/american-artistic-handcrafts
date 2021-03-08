@@ -42,11 +42,11 @@ export default function Header() {
         <Logo>
           <Link href="/">American Artistic Handcrafts</Link>
         </Logo>
+        <Nav />
       </div>
       <div className="sub-bar">
         <p>| Search Bar Placeholder |</p>
       </div>
-      <Nav />
     </HeaderStyles>
   );
 }
