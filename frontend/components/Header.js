@@ -22,10 +22,10 @@ const HeaderStyles = styled.header`
   .bar {
     border-bottom: 10px solid var(--black, black);
     text-align: center;
-    /* display: grid;
+    display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
-    align-items: center; */
+    align-items: stretch;
   }
 
   .sub-bar {
