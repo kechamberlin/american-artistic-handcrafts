@@ -54,6 +54,10 @@ export default function CreateProduct() {
         // Submit the input fields to the backend:
         const res = await createProduct();
         clearForm();
+        // Go to that product's page
+        Router.push({
+          pathname: `/product/${res.data.createProduct.id}`,
+        });
       }}
     >
       <DisplayError error={error} />
