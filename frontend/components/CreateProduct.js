@@ -54,8 +54,8 @@ export default function CreateProduct() {
         clearForm();
       }}
     >
-      <fieldset>
       <DisplayError error={error} />
+      <fieldset disabled={loading} aria-busy={loading}>
         <label htmlFor="image">
           Image
           <input
