@@ -9,36 +9,13 @@ export default function CreateProduct() {
     description: 'Cool chair',
   });
   return (
-    <Form>
-      <label htmlFor="name">
-        Name
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Name"
-          value={inputs.name}
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="price">
-        Price
-        <input
-          type="number"
-          id="price"
-          name="price"
-          placeholder="Price"
-          value={inputs.price}
-          onChange={handleChange}
-        />
-      </label>
-      <button onClick={clearForm} type="button">
     <Form
       onSubmit={(e) => {
         e.preventDefault();
         console.log(inputs);
       }}
     >
+      <fieldset>
         <label htmlFor="image">
           Image
           <input
@@ -46,6 +23,28 @@ export default function CreateProduct() {
             type="file"
             id="image"
             name="image"
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="name">
+          Name
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            value={inputs.name}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="price">
+          Price
+          <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Price"
+            value={inputs.price}
             onChange={handleChange}
           />
         </label>
@@ -68,6 +67,7 @@ export default function CreateProduct() {
       <button onClick={resetForm} type="button">
         Reset Form
       </button> */}
+      </fieldset>
     </Form>
   );
 }
