@@ -33,6 +33,16 @@ export default function CreateProduct() {
         />
       </label>
       <button onClick={clearForm} type="button">
+        <label htmlFor="image">
+          Image
+          <input
+            required
+            type="file"
+            id="image"
+            name="image"
+            onChange={handleChange}
+          />
+        </label>
         <label htmlFor="description">
           Description
           <textarea
