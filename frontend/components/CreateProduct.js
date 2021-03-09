@@ -55,6 +55,7 @@ export default function CreateProduct() {
       }}
     >
       <fieldset>
+      <DisplayError error={error} />
         <label htmlFor="image">
           Image
           <input
