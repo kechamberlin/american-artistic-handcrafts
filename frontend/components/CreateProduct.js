@@ -33,11 +33,12 @@ export default function CreateProduct() {
         />
       </label>
       <button onClick={clearForm} type="button">
+        {/* <button onClick={clearForm} type="button">
         Clear Form
       </button>
       <button onClick={resetForm} type="button">
         Reset Form
-      </button>
+      </button> */}
     </Form>
   );
 }
