@@ -36,6 +36,14 @@ export default function CreateProduct() {
     price: 50000,
     description: 'Cool chair',
   });
+
+  const [createProduct, { loading, error, data }] = useMutation(
+    CREATE_PRODUCT_MUTATION,
+    {
+      variables: inputs,
+    }
+  );
+
   return (
     <Form
       onSubmit={(e) => {
