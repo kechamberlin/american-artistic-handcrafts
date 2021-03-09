@@ -33,6 +33,12 @@ export default function CreateProduct() {
         />
       </label>
       <button onClick={clearForm} type="button">
+    <Form
+      onSubmit={(e) => {
+        e.preventDefault();
+        console.log(inputs);
+      }}
+    >
         <label htmlFor="image">
           Image
           <input
