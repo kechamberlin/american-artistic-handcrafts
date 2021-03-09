@@ -46,9 +46,12 @@ export default function CreateProduct() {
 
   return (
     <Form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
         console.log(inputs);
+        // Submit the input fields to the backend:
+        await createProduct();
+        clearForm();
       }}
     >
       <fieldset>
