@@ -33,6 +33,16 @@ export default function CreateProduct() {
         />
       </label>
       <button onClick={clearForm} type="button">
+        <label htmlFor="description">
+          Description
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description"
+            value={inputs.description}
+            onChange={handleChange}
+          />
+        </label>
         {/* <button onClick={clearForm} type="button">
         Clear Form
       </button>
