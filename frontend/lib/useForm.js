@@ -11,7 +11,7 @@ export default function useForm(initial = {}) {
       value = parseInt(value);
     }
     if (type === 'file') {
-      value[0] = e.target.files;
+      [value] = e.target.files;
     }
 
     // Do it this way when you have an object with multiple pieces of state
