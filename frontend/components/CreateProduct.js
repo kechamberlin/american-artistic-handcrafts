@@ -53,6 +53,9 @@ export default function CreateProduct() {
             onChange={handleChange}
           />
         </label>
+
+        <button type="submit">+ Add Product</button>
+
         {/* <button onClick={clearForm} type="button">
         Clear Form
       </button>
