@@ -27,7 +27,9 @@ export default function Pagination({ page }) {
         <title>American Artistic Handrcrafts - Page {page} of ___</title>
       </Head>
       <Link href="/">← Prev</Link>
-      <p>Page ___ of ___</p>
+      <p>
+        Page {page} of {pageCount}
+      </p>
       <p>{count} Items Total</p>
       <Link href="/">Next →</Link>
     </PaginationStyles>
