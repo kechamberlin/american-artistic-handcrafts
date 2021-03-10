@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import PaginationStyles from './styles/PaginationStyles';
 import DisplayError from './ErrorMessage';
+import { perPage } from '../config';
 
 const PAGINATION_QUERY = gql`
   query {
