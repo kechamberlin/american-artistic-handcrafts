@@ -27,8 +27,13 @@ const ProductsListStyles = styled.div`
   grid-gap: 60px;
 `;
 
-export default function Products() {
-  const { data, error, loading } = useQuery(ALL_PRODUCTS_QUERY);
+export default function Products({ page }) {
+  const { data, error, loading } = useQuery(ALL_PRODUCTS_QUERY, {
+    variables: {
+      skip: page * perPage - perPage,
+      first: perPage,
+    },
+  });
   console.log(data, error, loading);
   // TODO: Add a loading spinner animation
   if (loading) return <p>Loading...</p>;
