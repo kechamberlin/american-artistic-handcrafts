@@ -17,8 +17,8 @@ export default function SignIn() {
             name="email"
             placeholder="Your Email Address"
             autoComplete="email"
-            // value
-            // onChange
+            value={inputs.email}
+            onChange={handleChange}
           />
         </label>
         <label htmlFor="password">
@@ -28,8 +28,8 @@ export default function SignIn() {
             name="password"
             placeholder="Password"
             autoComplete="password"
-            // value
-            // onChange
+            value={inputs.password}
+            onChange={handleChange}
           />
         </label>
         <button type="submit">Sign In</button>
