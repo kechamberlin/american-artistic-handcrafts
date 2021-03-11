@@ -1,5 +1,22 @@
 import useForm from '../lib/useForm';
 import Form from './styles/Form';
+const SIGNIN_MUTATION = gql`
+  mutation SIGNIN_MUTATION($email: String!, $password: String!) {
+    UserAuthenticationWithPasswordSuccess(email: $email, password: $password) {
+      ... on UserAuthenticationWithPasswordSuccess {
+        item {
+          id
+          email
+          name
+        }
+      }
+      ... on UserAuthenticationWithPasswordFailure {
+        code
+        message
+      }
+    }
+  }
+`;
 
 export default function SignIn() {
   const { inputs, handleChange, resetForm } = useForm({
