@@ -1,6 +1,11 @@
+import useForm from '../lib/useForm';
 import Form from './styles/Form';
 
 export default function SignIn() {
+  const { inputs, handleChange, resetForm } = useForm({
+    email: '',
+    password: '',
+  });
   return (
     <Form method="POST">
       <fieldset>
