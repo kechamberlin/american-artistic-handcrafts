@@ -23,6 +23,13 @@ export default function SignIn() {
     email: '',
     password: '',
   });
+
+  const [signin, { data, loading }] = useMutation(SIGNIN_MUTATION, {
+    variables: inputs,
+    // Refetch the currenntly logged in User
+    refetchQueries: [{ query: CURRENT_USER_QUERY }],
+  });
+
   async function handleSubmit(e) {
     e.preventDefault();
     // Send email and password to GraphQL API
