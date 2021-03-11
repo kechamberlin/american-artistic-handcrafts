@@ -46,6 +46,12 @@ export default function SignIn() {
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>
+      <Error
+        error={
+          data?.authenticateUserWithPassword
+            ?.UserAuthenticationWithPasswordFailure
+        }
+      />
       <fieldset>
         <label htmlFor="email">
           Email
