@@ -6,6 +6,12 @@ export default function SignIn() {
     email: '',
     password: '',
   });
+  async function handleSubmit(e) {
+    e.preventDefault();
+    // Send email and password to GraphQL API
+    await signin();
+    resetForm();
+  }
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>
