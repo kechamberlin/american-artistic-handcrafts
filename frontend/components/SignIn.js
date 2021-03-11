@@ -7,7 +7,7 @@ import Error from './ErrorMessage';
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
-    UserAuthenticationWithPasswordSuccess(email: $email, password: $password) {
+    authenticateUserWithPassword(email: $email, password: $password) {
       ... on UserAuthenticationWithPasswordSuccess {
         item {
           id
