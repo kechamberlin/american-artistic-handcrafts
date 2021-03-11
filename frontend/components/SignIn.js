@@ -7,7 +7,7 @@ export default function SignIn() {
     password: '',
   });
   return (
-    <Form method="POST">
+    <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>
       <fieldset>
         <label htmlFor="email">
