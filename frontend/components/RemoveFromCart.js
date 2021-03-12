@@ -26,9 +26,8 @@ function update(cache, payload) {
 
 export default function RemoveFromCart({ id }) {
   const [removeFromCart, { loading }] = useMutation(REMOVE_FROM_CART_MUTATION, {
-    variables: {
-      id: id,
-    },
+    variables: { id: id },
+    update,
   });
   return (
     <BigButton
