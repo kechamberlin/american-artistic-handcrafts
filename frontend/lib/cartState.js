@@ -7,6 +7,17 @@ function CartStateProvider({ children }) {
   // This is our own custom provider where we will store data (state) and functionality (updaters) and anyone can access it via consumer
   const [cartOpen, setCartOpen] = useState(false);
 
+  // Helper functions
+  function toggleCart() {
+    setCartOpen(!cartOpen);
+  }
+  function closeCart() {
+    setCartOpen(false);
+  }
+  function openCart() {
+    setCartOpen(true);
+  }
+
   return (
     <LocalStateProvider value={{ cartOpen }}>{children}</LocalStateProvider>
   );
