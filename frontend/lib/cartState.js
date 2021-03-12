@@ -13,9 +13,10 @@ function CartStateProvider({ children }) {
 }
 
 // Make a custom hook for accessing the cart local state
-export { CartStateProvider };
 function useCart() {
   // We use a consumer here to access the local state
   const all = useContext(LocalStateContext);
   return all;
 }
+
+export { CartStateProvider, useCart };
