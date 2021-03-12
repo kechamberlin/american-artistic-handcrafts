@@ -4,6 +4,8 @@ import Supreme from './styles/Supreme';
 import formatMoney from '../lib/FormatMoney';
 import { useUser } from './User';
 import calcTotalPrice from '../lib/calcTotalPrice';
+import { useCart } from '../lib/cartState';
+import CloseButton from './styles/CloseButton';
 
 const CartItemStyles = styled.li`
   padding: 1rem 0;
