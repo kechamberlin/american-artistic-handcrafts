@@ -38,6 +38,11 @@ export const Product = list({
       },
     }),
     price: integer(),
-    // TODO: Photo
+    user: relationship({
+      ref: 'User.products',
+      defaultValue: ({ context }) => ({
+        connect: { id: context.session.itemId },
+      }),
+    }),
   },
 });
