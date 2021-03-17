@@ -77,7 +77,7 @@ export default withAuth(
       },
     },
     session: withItemData(statelessSessions(sessionConfig), {
-      User: `id`,
+      User: `id name email role { ${permissionsList.join(' ')} }`,
     }),
   })
 );
