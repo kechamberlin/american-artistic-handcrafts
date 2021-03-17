@@ -66,6 +66,7 @@ export default withAuth(
       CartItem,
       OrderItem,
       Order,
+      Role,
     }),
     extendGraphqlSchema: extendGraphqlSchema,
     ui: {
