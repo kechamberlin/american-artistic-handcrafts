@@ -4,7 +4,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Link from 'next/link';
 import ErrorMessage from '../components/ErrorMessage';
-import formatMoney from '../lib/formatMoney';
+import formatMoney from '../lib/FormatMoney';
 import OrderItemStyles from '../components/styles/OrderItemStyles';
 
 const USER_ORDERS_QUERY = gql`
