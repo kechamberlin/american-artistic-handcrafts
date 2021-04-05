@@ -75,6 +75,7 @@ export default function CreateProduct() {
         <label htmlFor="name">
           Name
           <input
+            required
             type="text"
             id="name"
             name="name"
@@ -86,6 +87,7 @@ export default function CreateProduct() {
         <label htmlFor="price">
           Price
           <input
+            required
             type="number"
             id="price"
             name="price"
@@ -97,6 +99,7 @@ export default function CreateProduct() {
         <label htmlFor="description">
           Description
           <textarea
+            required
             id="description"
             name="description"
             placeholder="Description"
