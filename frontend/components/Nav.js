@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { GiShoppingCart } from 'react-icons/gi';
 import { useCart } from '../lib/cartState';
 import CartCount from './CartCount';
 import SignOut from './SignOut';
