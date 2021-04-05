@@ -57,6 +57,8 @@ export default function SingleProduct({ id }) {
       <div className="details">
         <h2>{Product.name}</h2>
         <p>{Product.description}</p>
+        <h1>{formatMoney(Product.price)}</h1>
+        <AddToCart id={Product.id} />
       </div>
     </ProductStyles>
   );
