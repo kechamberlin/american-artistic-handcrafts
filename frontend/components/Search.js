@@ -69,7 +69,7 @@ export default function Search() {
         <input
           {...getInputProps({
             type: 'search',
-            placeholder: 'Search for an Item',
+            placeholder: 'Search for an Item...',
             id: 'search',
             // Add loading spinner or pass loading bar for better UI
             className: loading ? 'loading' : '',
