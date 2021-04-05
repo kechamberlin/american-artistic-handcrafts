@@ -10,6 +10,7 @@ export default function Nav() {
   const { openCart } = useCart();
   return (
     <NavStyles>
+      <Link href="/">Home</Link>
       <Link href="/products">Products</Link>
       {user && (
         <>
