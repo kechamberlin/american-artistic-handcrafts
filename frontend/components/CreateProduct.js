@@ -85,7 +85,7 @@ export default function CreateProduct() {
           />
         </label>
         <label htmlFor="price">
-          Price
+          Price {inputs.price >= 1 ? `${formatMoney(inputs.price)}` : ''}
           <input
             required
             type="number"
