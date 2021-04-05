@@ -21,6 +21,18 @@ const ProductStyles = styled.div`
     width: 100%;
     object-fit: contain;
   }
+  button {
+    border-radius: 96px;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #540b0d;
+      color: white;
+      opacity: 95%;
+    }
+  }
 `;
 
 const SINGLE_ITEM_QUERY = gql`
