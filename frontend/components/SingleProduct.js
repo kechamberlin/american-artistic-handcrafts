@@ -2,7 +2,9 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import Head from 'next/head';
 import styled from 'styled-components';
+import AddToCart from './AddToCart';
 import DisplayError from './ErrorMessage';
+import formatMoney from '../lib/FormatMoney';
 
 const ProductStyles = styled.div`
   display: grid;
