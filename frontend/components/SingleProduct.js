@@ -13,7 +13,10 @@ const ProductStyles = styled.div`
   max-width: var(--maxWidth);
   justify-content: center;
   align-items: top;
-  gap: 2rem;
+  gap: 3rem;
+  @media (max-width: 900px) {
+    display: block;
+  }
   img {
     width: 100%;
     object-fit: contain;
