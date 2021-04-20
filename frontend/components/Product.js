@@ -42,6 +42,11 @@ export default function Product({ product }) {
           </div>
         </>
       )}
+      {!user && (
+        <PriceTag>
+          <Link href="/signin">Sign in to view price</Link>
+        </PriceTag>
+      )}
     </ItemStyles>
   );
 }
