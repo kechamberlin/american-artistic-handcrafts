@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import AddToCart from './AddToCart';
 import DisplayError from './ErrorMessage';
 import formatMoney from '../lib/FormatMoney';
+import { useUser } from './User';
 
 const ProductStyles = styled.div`
   display: grid;
@@ -52,6 +53,7 @@ const SINGLE_ITEM_QUERY = gql`
 `;
 
 export default function SingleProduct({ id }) {
+  const user = useUser();
   const { data, loading, error } = useQuery(SINGLE_ITEM_QUERY, {
     variables: {
       id: id,
