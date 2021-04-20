@@ -19,22 +19,29 @@ export default function Product({ product }) {
       <Title>
         <Link href={`/product/${product.id}`}>{product.name}</Link>
       </Title>
-      <PriceTag>{formatMoney(product.price)}</PriceTag>
       <p>{product.description}</p>
-      <div className="buttonList">
-        <Link
-          href={{
-            pathname: 'update',
-            query: {
-              id: product.id,
-            },
-          }}
-        >
-          Edit ✏️
-        </Link>
-        <AddToCart id={product.id} />
-        <DeleteProduct id={product.id}>Delete</DeleteProduct>
-      </div>
+
+      {/* Must be signed in to view Product price and Button List */}
+      {user && (
+        <>
+          <PriceTag>{formatMoney(product.price)}</PriceTag>
+
+          <div className="buttonList">
+            <Link
+              href={{
+                pathname: 'update',
+                query: {
+                  id: product.id,
+                },
+              }}
+            >
+              <div className="editList">Edit</div>
+            </Link>
+            <AddToCart id={product.id} />
+            <DeleteProduct id={product.id}>Delete</DeleteProduct>
+          </div>
+        </>
+      )}
     </ItemStyles>
   );
 }
