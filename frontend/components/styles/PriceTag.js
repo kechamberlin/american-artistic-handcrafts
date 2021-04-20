@@ -12,6 +12,11 @@ const PriceTag = styled.span`
   position: absolute;
   top: -3px;
   right: -3px;
+
+  a {
+    color: white;
+  }
+
 `;
 
 export default PriceTag;
