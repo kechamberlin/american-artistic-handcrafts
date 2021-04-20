@@ -80,7 +80,7 @@ export default function UpdateProduct({ id }) {
           />
         </label>
         <label htmlFor="price">
-          Price
+          Price {inputs.price >= 1 ? `${formatMoney(inputs.price)}` : ''}
           <input
             type="number"
             id="price"
