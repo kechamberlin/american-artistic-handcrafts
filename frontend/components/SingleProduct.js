@@ -29,7 +29,7 @@ const ProductStyles = styled.div`
     padding: 1rem;
     &:hover {
       cursor: pointer;
-      background-color: #540b0d;
+      background-color: var(--maroon);
       color: white;
       opacity: 95%;
     }
