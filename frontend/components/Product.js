@@ -5,8 +5,11 @@ import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/FormatMoney';
 import DeleteProduct from './DeleteProduct';
 import AddToCart from './AddToCart';
+import { useUser } from './User';
 
 export default function Product({ product }) {
+  const user = useUser();
+
   return (
     <ItemStyles>
       <img
